@@ -1,0 +1,3206 @@
+[Main]
+FileType=CIR
+Version=12.00
+Program=Micro-Cap
+Component Version=10.00
+Shape Version=11.00
+Screen=2560,1440
+MCAPVersion=12.2.0.5
+Key ID=Demo
+NLCnt=212
+TXCnt=25
+
+[shapedef]
+Name=Battery
+Line=0,0,22,0
+Line=22,-3,22,3
+Line=26,-7,26,7
+Line=26,0,48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Bjt.root
+Line=0,0,13,0
+Rectangle=13,-12,15,12
+Current=32,-24,32,-16
+Current=32,24,32,16
+Current=0,-8,8,-8
+PolyOpen=3
+PolyLine=24,-24
+PolyLine=24,-12
+PolyLine=14,-2
+PolyOpen=3
+PolyLine=24,24
+PolyLine=24,12
+PolyLine=14,2
+
+[shapedef]
+Name=Capacitor
+Line=0,0,22,0
+Line=22,-8,22,8
+Line=26,-8,26,8
+Line=26,0,48,0
+Current=32,12,16,12
+
+[shapedef]
+Name=Diode
+Root="Diode.root",0,0,0
+
+[shapedef]
+Name=Diode.root
+Line=0,0,20,0
+Line=28,0,48,0
+Rectangle=18,-8,20,8
+PolyClosed=3
+PolyLine=20,0
+PolyLine=28,-8
+PolyLine=28,8
+Current=32,16,16,16
+
+[shapedef]
+Name=Ground
+Line=0,0,12,0
+Line=12,-8,12,8
+Line=18,-4,18,4
+Line=24,0,24,0
+
+[shapedef]
+Name=Jfet.root
+Line=0,0,6,0
+Line=14,-12,14,12
+Line=14,-8,24,-8
+Line=14,8,24,8
+Ellipse=31,15,33,17
+FColor=None
+Line=24,8,24,24
+Line=24,-8,24,-24
+Line=10,0,14,0
+Current=32,-24,32,-16
+Current=32,24,32,16
+Current=0,-8,8,-8
+
+[shapedef]
+Name=Minus.root
+Line=-2,0,2,0
+
+[shapedef]
+Name=NJFET
+PolyClosed=3
+PolyLine=6,4
+PolyLine=6,-4
+PolyLine=10,0
+Root="Jfet.root",0,0,0
+
+[shapedef]
+Name=NPN
+Root="Bjt.root",0,0,0
+PolyClosed=3
+PolyLine=20,12
+PolyLine=24,12
+PolyLine=24,8
+
+[shapedef]
+Name=Opamp5
+Root="Opamp.root",0,0,0
+Root="Plus.root",25,-4,0
+Root="Minus.root",25,52,0
+Line=32,56,32,34
+Line=32,-8,32,13
+
+[shapedef]
+Name=Opamp.root
+Line=0,48,6,48
+Line=0,0,5,0
+Line=6,-4,6,52
+Line=6,-4,48,24
+Line=6,52,48,24
+Line=48,24,72,24
+Line=10,12,14,12
+Line=12,10,12,14
+Line=10,36,14,36
+Line=4,0,6,0
+
+[shapedef]
+Name=Plus.root
+Line=-2,0,2,0
+Line=0,-2,0,2
+
+[shapedef]
+Name=Pulse_Source
+Root="Vsource.root",0,0,0
+Line=20,-4,20,0
+Line=20,0,26,0
+Line=26,0,26,4
+
+[shapedef]
+Name=Resistor
+PolyOpen=12
+PolyLine=0,0
+PolyLine=0,0
+PolyLine=12,0
+PolyLine=14,-4
+PolyLine=18,4
+PolyLine=22,-4
+PolyLine=26,4
+PolyLine=30,-4
+PolyLine=34,4
+PolyLine=36,0
+PolyLine=48,0
+PolyLine=48,0
+Current=32,8,16,8
+
+[shapedef]
+Name=Vsource.root
+Line=0,0,12,0
+Line=36,0,48,0
+Ellipse=12,-12,36,12
+FColor=None
+Line=7,5,7,9
+Root="Plus.root",41,7,0
+Current=32,16,16,16
+
+[shapedef]
+Name=Zener
+Root="Diode.root",0,0,0
+Rectangle=16,-9,20,-8
+Rectangle=18,8,22,9
+
+[compdef]
+Name=Resistor
+Definition=Resistor
+Shape=Resistor
+Mask=6401
+Used=187
+memo=Resistor
+Label Offset=18,6,8,11
+PinCnt=2
+Pin="Plus",6,0,-10,-4
+Pin="Minus",0,0,-14,-4
+
+[compdef]
+Name=Capacitor
+Definition=Capacitor
+Shape=Capacitor
+Mask=6657
+Used=41
+memo=Capacitor
+Label Offset=16,12,12,12
+PinCnt=2
+Pin="Plus",6,0,-3,-5
+Pin="Minus",0,0,-14,-5
+
+[compdef]
+Name=Opamp
+Definition=Opamp
+Shape=Opamp5
+Mask=5121
+Used=9
+memo=Opamp
+Label Offset=44,29,-14,39
+PinCnt=5
+Pin="Plus input",0,0,-31,-7
+Pin="Minus input",0,6,-33,20
+Pin="VEE",4,7,3,-5
+Pin="Output",9,3,-13,-4
+Pin="VCC",4,-1,5,14
+
+[compdef]
+Name=Battery
+Definition=Battery
+Shape=Battery
+Mask=6913
+Used=53
+memo=Battery
+Label Offset=19,7,10,13
+PinCnt=2
+Pin="Plus",6,0,-4,-5
+Pin="Minus",0,0,-10,-5
+
+[compdef]
+Name=Ground
+Definition=Ground
+Shape=Ground
+Mask=1793
+Used=278
+memo=Ground
+Label Offset=0,0,0,0
+PinCnt=1
+Pin="PinA",0,0,-3,-7
+
+[compdef]
+Name=NPN
+Definition=NPN
+Shape=NPN
+Mask=4097
+Used=12
+memo=NPN Transistor
+Label Offset=37,-17,-14,33
+PinCnt=3
+Pin="Collector",3,-3,4,14
+Pin="Base",0,0,-18,-3
+Pin="Emitter",3,3,5,1
+
+[compdef]
+Name=Diode
+Definition=Diode
+Shape=Diode
+Mask=5889
+Used=12
+memo=Diode
+Label Offset=17,10,12,12
+PinCnt=2
+Pin="Anode",6,0,-9,-8
+Pin="Cathode",0,0,-20,-8
+
+[compdef]
+Name=Zener
+Definition=Diode
+Shape=Zener
+Mask=5376
+Used=2
+memo=Zener diode
+Label Offset=16,11,16,11
+PinCnt=2
+Pin="Anode",6,0,-14,-2
+Pin="Cathode",0,0,-26,-2
+
+[compdef]
+Name=Pulse Source
+Definition=Pulse source
+Shape=Pulse_Source
+Mask=5888
+Used=10
+memo=Pulse Source
+Label Offset=18,13,15,9
+PinCnt=2
+Pin="Plus",6,0,-5,-4
+Pin="Minus",0,0,-19,-4
+
+[compdef]
+Name=NJFET
+Definition=NJFET
+Shape=NJFET
+Mask=5888
+Used=11
+memo=NJFET
+Label Offset=37,-14,-8,35
+PinCnt=3
+Pin="Drain",3,-3,6,13
+Pin="Gate",0,0,-19,-3
+Pin="Source",3,3,6,4
+
+[Circuit]
+Window Placement=2,3, -1,-1, -8,-31, 0,0,1961,821
+Default Object=Color=#000080
+Default Object Font=Height=-15,FStyle=0,Color=#000080,Name=Arial
+Default Object Apply Border To Text=No
+Default Object Apply Fill To Text=No
+Default Object GridSnap=No
+NodeVoltageFormat=3
+CurrentFormat=3
+PowerFormat=3
+PathDelayFormat=3
+WarningFormat=3
+GridTextFormulaFormat=3
+Window Placement in Transient Analysis=0,1, -1,-1, -8,-31, 908,0,2546,1192
+SpiceType=AMBIGUOUS
+Title_Block_Border=None
+Title_Block=False
+Show Nodes=False
+Show Voltages=False
+Show Current=False
+Show Power=False
+Show Condition=False
+Show Pin Connections=False
+Show Connection Warnings=False
+Show Cross=False
+Show Attribute Text=True
+Show Grid Text=True
+
+[Object]
+Object=Star
+NumberOfPoints=5
+CBorder=#000080
+Px=1897,218,1987,293
+
+[Object]
+Object=Rectangle
+CBorder=#000080
+Pattern=Dot6
+Px=1368,44,2245,927
+
+[Comp]
+Name=Resistor
+Px=536,440
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R1
+Style=8192
+
+[Attr]
+ON=-24,-39,RESISTANCE
+V=15
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=736,536
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R2
+Style=8192
+
+[Attr]
+ON=-24,-39,RESISTANCE
+V=15
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=536,536
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R3
+Style=8192
+
+[Attr]
+ON=-32,-39,RESISTANCE
+V=196
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=352,360
+Rot=4
+
+[Attr]
+ON=18,-20,PART
+V=R4
+Style=8192
+
+[Attr]
+ON=18,-34,RESISTANCE
+V=196k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=600,288
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R5
+Style=8192
+
+[Attr]
+ON=-23,-39,RESISTANCE
+V=1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=800,288
+Rot=3
+
+[Attr]
+ON=-24,-25,PART
+V=R6
+Style=8192
+
+[Attr]
+ON=-23,-39,RESISTANCE
+V=1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=536,360,536,392
+
+[Wire]
+Pxs=536,360,576,360
+
+[Wire]
+Pxs=400,360,528,360
+
+[Wire]
+Pxs=536,440,536,472
+
+[Wire]
+Pxs=624,360,736,360
+
+[Wire]
+Pxs=736,328,736,352
+
+[Wire]
+Pxs=736,424,736,448
+
+[Wire]
+Pxs=536,536,584,536
+
+[Wire]
+Pxs=600,288,600,336
+
+[Wire]
+Pxs=800,288,800,400
+
+[Wire]
+Pxs=760,400,800,400
+
+[Comp]
+Name=Capacitor
+Px=736,328
+Rot=5
+
+[Attr]
+ON=12,-26,PART
+V=C1
+Style=8192
+
+[Attr]
+ON=12,-40,CAPACITANCE
+V=100p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=624,424
+Rot=5
+
+[Attr]
+ON=12,-26,PART
+V=C2
+Style=8192
+
+[Attr]
+ON=12,-40,CAPACITANCE
+V=100p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=624,360,624,376
+
+[Wire]
+Pxs=624,424,624,448
+
+[Wire]
+Pxs=624,448,736,448
+
+[Wire]
+Pxs=736,192,736,280
+
+[Wire]
+Pxs=528,192,736,192
+
+[Comp]
+Name=Resistor
+Px=976,192
+Rot=4
+
+[Attr]
+ON=18,-20,PART
+V=R7
+Style=8192
+
+[Attr]
+ON=18,-34,RESISTANCE
+V=464k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=528,192,528,360
+
+[Wire]
+Pxs=528,360,536,360
+
+[Comp]
+Name=Capacitor
+Px=584,536
+Rot=5
+
+[Attr]
+ON=12,-26,PART
+V=C3
+Style=8192
+
+[Attr]
+ON=12,-40,CAPACITANCE
+V=47u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=584,536,736,536
+
+[Wire]
+Pxs=584,472,584,488
+
+[Wire]
+Pxs=536,472,584,472
+
+[Wire]
+Pxs=536,472,536,488
+
+[Wire]
+Pxs=736,192,976,192
+
+[Wire]
+Pxs=736,360,736,376
+
+[Wire]
+Pxs=736,448,736,488
+
+[Comp]
+Name=Capacitor
+Px=928,352
+Rot=6
+
+[Attr]
+ON=-33,12,PART
+V=C4
+Style=8192
+
+[Attr]
+ON=-44,26,CAPACITANCE
+V=3.3u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=736,352,832,352
+
+[Wire]
+Pxs=736,352,736,360
+
+[Comp]
+Name=Opamp
+Px=1480,328
+Rot=4
+
+[Attr]
+ON=44,-43,PART
+V=X1
+Style=8192
+
+[Attr]
+ON=44,-57,MODEL
+V=LM741C
+
+[Attr]
+ON=44,-85,PACKAGE
+V=TO-5C_8
+
+[Comp]
+Name=Battery
+Px=48,80
+Rot=3
+Page=3
+
+[Attr]
+ON=-26,-41,PART
+V=V1
+Style=8192
+
+[Attr]
+ON=-26,-27,VALUE
+V=12
+Style=8192
+
+[Comp]
+Name=Ground
+Px=48,80
+Rot=7
+Page=3
+
+[Comp]
+Name=Battery
+Px=112,80
+Rot=3
+Page=3
+
+[Attr]
+ON=-26,-41,PART
+V=V2
+Style=8192
+
+[Attr]
+ON=-31,-27,VALUE
+V=-12
+Style=8192
+
+[Comp]
+Name=Ground
+Px=112,80
+Rot=7
+Page=3
+
+[Comp]
+Name=NPN
+Px=1104,352
+
+[Attr]
+ON=37,-17,PART
+V=Q1
+Style=8192
+
+[Attr]
+ON=37,-3,MODEL
+V=2SC3837K
+
+[Attr]
+ON=37,25,PACKAGE
+V=SC-59
+
+[Comp]
+Name=Capacitor
+Px=952,264
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=C5
+Style=8192
+
+[Attr]
+ON=-48,26,CAPACITANCE
+V=0.01u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1016,264
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=C6
+Style=8192
+
+[Attr]
+ON=-44,26,CAPACITANCE
+V=100p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1096,424
+Rot=6
+
+[Attr]
+ON=-33,12,PART
+V=C7
+Style=8192
+
+[Attr]
+ON=-48,26,CAPACITANCE
+V=100p
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=944,440
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=C8
+Style=8192
+
+[Attr]
+ON=-40,26,CAPACITANCE
+V=0.1u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=984,488
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R8
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=3.16k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=944,352,944,440
+
+[Wire]
+Pxs=944,352,952,352
+
+[Wire]
+Pxs=984,352,984,440
+
+[Wire]
+Pxs=984,488,984,536
+
+[Wire]
+Pxs=736,536,872,536
+
+[Wire]
+Pxs=944,488,944,536
+
+[Wire]
+Pxs=944,536,984,536
+
+[Wire]
+Pxs=984,352,1016,352
+
+[Wire]
+Pxs=1016,312,1016,352
+
+[Wire]
+Pxs=1016,352,1024,352
+
+[Wire]
+Pxs=952,312,952,352
+
+[Wire]
+Pxs=952,352,984,352
+
+[Wire]
+Pxs=952,264,1016,264
+
+[Wire]
+Pxs=1016,264,1128,264
+
+[Wire]
+Pxs=1128,264,1128,272
+
+[Wire]
+Pxs=1128,376,1128,408
+
+[Wire]
+Pxs=1096,424,1128,424
+
+[Wire]
+Pxs=1024,424,1048,424
+
+[Wire]
+Pxs=1024,352,1024,424
+
+[Wire]
+Pxs=1024,352,1104,352
+
+[Comp]
+Name=Capacitor
+Px=1128,440
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=C9
+Style=8192
+
+[Attr]
+ON=-36,26,CAPACITANCE
+V=47u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1184,440
+Rot=7
+
+[Attr]
+ON=-37,12,PART
+V=C10
+Style=8192
+
+[Attr]
+ON=-44,26,CAPACITANCE
+V=100u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1144,536
+Rot=5
+
+[Attr]
+ON=8,-25,PART
+V=R9
+Style=8192
+
+[Attr]
+ON=8,-39,RESISTANCE
+V=31.6
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1288,408
+Rot=6
+
+[Attr]
+ON=-42,6,PART
+V=R10
+Style=8192
+
+[Attr]
+ON=-33,20,RESISTANCE
+V=1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1280,272
+Rot=6
+
+[Attr]
+ON=-42,6,PART
+V=R11
+Style=8192
+
+[Attr]
+ON=-42,20,RESISTANCE
+V=316
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1128,272,1184,272
+
+[Wire]
+Pxs=1128,272,1128,328
+
+[Wire]
+Pxs=1128,408,1160,408
+
+[Wire]
+Pxs=1128,408,1128,424
+
+[Wire]
+Pxs=1128,424,1128,440
+
+[Wire]
+Pxs=1128,440,1184,440
+
+[Wire]
+Pxs=1128,488,1144,488
+
+[Wire]
+Pxs=1144,488,1184,488
+
+[Wire]
+Pxs=984,536,1144,536
+
+[Wire]
+Pxs=1144,536,1288,536
+
+[Wire]
+Pxs=1280,272,1424,272
+
+[Wire]
+Pxs=1480,272,1480,280
+
+[Wire]
+Pxs=1456,328,1480,328
+
+[Wire]
+Pxs=1456,328,1456,536
+
+[Comp]
+Name=Resistor
+Px=1744,304
+Rot=7
+
+[Attr]
+ON=-32,11,PART
+V=R12
+Style=8192
+
+[Attr]
+ON=-43,25,RESISTANCE
+V=12.1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1744,384
+Rot=7
+
+[Attr]
+ON=6,12,PART
+V=R13
+Style=8192
+
+[Attr]
+ON=8,27,RESISTANCE
+V=10k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1744,480
+Rot=7
+
+[Attr]
+ON=-32,11,PART
+V=R14
+Style=8192
+
+[Attr]
+ON=-43,25,RESISTANCE
+V=26.1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1744,568
+Rot=7
+
+[Attr]
+ON=-32,11,PART
+V=R15
+Style=8192
+
+[Attr]
+ON=-43,25,RESISTANCE
+V=26.1k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1664,576
+Rot=7
+
+[Attr]
+ON=-37,12,PART
+V=C11
+Style=8192
+
+[Attr]
+ON=-36,26,CAPACITANCE
+V=33u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1816,336
+Rot=7
+
+[Attr]
+ON=-37,12,PART
+V=C12
+Style=8192
+
+[Attr]
+ON=-39,27,CAPACITANCE
+V=8.2n
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Diode
+Px=1672,432
+Rot=5
+
+[Attr]
+ON=12,-26,PART
+V=D1
+Style=8192
+
+[Attr]
+ON=12,-40,MODEL
+V=1N4148
+
+[Attr]
+ON=12,-68,PACKAGE
+V=DO-35
+
+[Comp]
+Name=Diode
+Px=1640,384
+Rot=7
+
+[Attr]
+ON=-29,12,PART
+V=D2
+Style=8192
+
+[Attr]
+ON=-61,26,MODEL
+V=1N4148
+
+[Attr]
+ON=-52,54,PACKAGE
+V=DO-35
+
+[Comp]
+Name=Resistor
+Px=1696,384
+
+[Attr]
+ON=-12,-24,PART
+V=R16
+Style=8192
+
+[Attr]
+ON=13,-23,RESISTANCE
+V=100k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1640,384,1672,384
+
+[Wire]
+Pxs=1672,384,1696,384
+
+[Wire]
+Pxs=1640,432,1672,432
+
+[Wire]
+Pxs=1672,432,1744,432
+
+[Wire]
+Pxs=1744,352,1744,384
+
+[Wire]
+Pxs=1744,432,1744,456
+
+[Wire]
+Pxs=1744,528,1744,544
+
+[Wire]
+Pxs=1288,408,1344,408
+
+[Wire]
+Pxs=1344,408,1344,432
+
+[Wire]
+Pxs=1344,432,1640,432
+
+[Wire]
+Pxs=1552,304,1624,304
+
+[Wire]
+Pxs=1744,304,1816,304
+
+[Wire]
+Pxs=1816,304,1816,336
+
+[Wire]
+Pxs=1816,384,1816,456
+
+[Wire]
+Pxs=1744,456,1816,456
+
+[Wire]
+Pxs=1744,456,1744,480
+
+[Wire]
+Pxs=1744,616,1744,656
+
+[Wire]
+Pxs=1456,536,1456,624
+
+[Wire]
+Pxs=1456,624,1664,624
+
+[Wire]
+Pxs=1664,544,1664,576
+
+[Wire]
+Pxs=1664,544,1744,544
+
+[Wire]
+Pxs=1744,544,1744,568
+
+[Comp]
+Name=Resistor
+Px=1832,456
+
+[Attr]
+ON=18,6,PART
+V=R17
+Style=8192
+
+[Attr]
+ON=18,20,RESISTANCE
+V=196k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1920,488
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R67
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=2150
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=2016,480
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R69
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=1960
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1288,536,1456,536
+
+[Wire]
+Pxs=1920,456,1920,488
+
+[Wire]
+Pxs=1880,456,1920,456
+
+[Wire]
+Pxs=1816,456,1832,456
+
+[Wire]
+Pxs=2016,456,2016,480
+
+[Wire]
+Pxs=1920,456,1984,456
+
+[Wire]
+Pxs=1816,304,1928,304
+
+[Comp]
+Name=Zener
+Px=1984,320
+Rot=7
+
+[Attr]
+ON=-33,11,PART
+V=D3
+Style=8192
+
+[Attr]
+ON=-72,25,MODEL
+V=BZX585-B2V4
+
+[Attr]
+ON=-72,53,PACKAGE
+V=SOD-523
+
+[Comp]
+Name=Zener
+Px=1984,440
+Rot=5
+
+[Attr]
+ON=16,-25,PART
+V=D4
+Style=8192
+
+[Attr]
+ON=16,-39,MODEL
+V=BZX585-B2V4
+
+[Attr]
+ON=16,-67,PACKAGE
+V=SOD-523
+
+[Comp]
+Name=Capacitor
+Px=2040,304
+
+[Attr]
+ON=16,12,PART
+V=C13
+Style=8192
+
+[Attr]
+ON=16,26,CAPACITANCE
+V=0.047uF
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=2168,304
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R20
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=32k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1984,304,1984,320
+
+[Wire]
+Pxs=1984,432,1984,440
+
+[Wire]
+Pxs=1984,456,2016,456
+
+[Wire]
+Pxs=1984,304,2040,304
+
+[Wire]
+Pxs=2088,304,2168,304
+
+[Wire]
+Pxs=2168,352,2168,616
+
+[Wire]
+Pxs=280,360,296,360
+
+[Wire]
+Pxs=296,360,352,360
+
+[Comp]
+Name=Pulse Source
+Px=608,88
+Rot=7
+
+[Attr]
+ON=-31,9,PART
+V=V3
+Style=8192
+
+[Attr]
+ON=-66,23,MODEL
+V=SQUARE
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=608,136,608,160
+
+[Wire]
+Pxs=600,240,608,240
+
+[Wire]
+Pxs=800,240,808,240
+
+[Wire]
+Pxs=1024,88,1024,192
+
+[Comp]
+Name=Battery
+Px=280,472
+Rot=3
+
+[Attr]
+ON=-26,-27,PART
+V=V5
+Style=8192
+
+[Attr]
+ON=-46,-41,VALUE
+V=145m
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=280,472,280,536
+
+[Wire]
+Pxs=280,536,536,536
+
+[Wire]
+Pxs=280,360,280,424
+
+[Wire]
+Pxs=808,168,808,176
+
+[Comp]
+Name=Resistor
+Px=1424,96
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R21
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=31.6k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1424,184
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R22
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=14.7k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Resistor
+Px=1624,160
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R23
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=56.2k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=1528,160
+Rot=1
+
+[Attr]
+ON=12,12,PART
+V=C14
+Style=8192
+
+[Attr]
+ON=12,26,CAPACITANCE
+V=60u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1424,144,1424,160
+
+[Wire]
+Pxs=1424,232,1424,272
+
+[Wire]
+Pxs=1424,272,1480,272
+
+[Wire]
+Pxs=1424,160,1528,160
+
+[Wire]
+Pxs=1528,160,1624,160
+
+[Wire]
+Pxs=1424,160,1424,184
+
+[Wire]
+Pxs=1624,208,1624,304
+
+[Wire]
+Pxs=1624,304,1744,304
+
+[Wire]
+Pxs=1528,208,1528,224
+
+[Wire]
+Pxs=1528,224,1544,224
+
+[Wire]
+Pxs=608,80,608,88
+
+[Wire]
+Pxs=608,160,608,240
+
+[Comp]
+Name=Pulse Source
+Px=808,120
+Rot=7
+
+[Attr]
+ON=-31,9,PART
+V=V6
+Style=8192
+
+[Attr]
+ON=-66,23,MODEL
+V=SQUARE1
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=808,88,808,120
+
+[Wire]
+Pxs=608,88,696,88
+
+[Wire]
+Pxs=808,176,808,240
+
+[Comp]
+Name=Battery
+Px=1088,144
+Rot=3
+
+[Attr]
+ON=-26,-27,PART
+V=V7
+Style=8192
+
+[Attr]
+ON=-46,-41,VALUE
+V=0.004
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=1088,88,1088,96
+
+[Wire]
+Pxs=1024,88,1064,88
+
+[Wire]
+Pxs=1064,88,1088,88
+
+[Wire]
+Pxs=1984,320,1984,336
+
+[Wire]
+Pxs=1984,440,1984,456
+
+[Wire]
+Pxs=1984,368,1984,392
+
+[Wire]
+Pxs=1928,304,1984,304
+
+[Comp]
+Name=NJFET
+Px=600,336
+Rot=7
+
+[Attr]
+ON=-5,35,PART
+V=J1
+Style=8192
+
+[Attr]
+ON=-59,49,MODEL
+V=MMBFJ112
+
+[Attr]
+ON=0,0,PACKAGE
+V=SOT-23
+
+[Comp]
+Name=NJFET
+Px=760,400
+Rot=2
+
+[Attr]
+ON=-50,0,PART
+V=J2
+Style=8192
+
+[Attr]
+ON=-104,-14,MODEL
+V=MMBFJ112
+
+[Attr]
+ON=0,0,PACKAGE
+V=TO-72
+
+[Wire]
+Pxs=928,352,944,352
+
+[Wire]
+Pxs=1184,272,1232,272
+
+[Wire]
+Pxs=1160,408,1240,408
+
+[Comp]
+Name=Ground
+Px=696,88
+Rot=7
+
+[Wire]
+Pxs=696,88,808,88
+
+[Comp]
+Name=Ground
+Px=872,536
+Rot=7
+
+[Wire]
+Pxs=872,536,944,536
+
+[Comp]
+Name=Opamp
+Px=1520,784
+Rot=4
+
+[Attr]
+ON=44,-43,PART
+V=X2
+Style=8192
+
+[Attr]
+ON=44,-57,MODEL
+V=LM741C
+
+[Attr]
+ON=44,-85,PACKAGE
+V=TO-5C_8
+
+[Wire]
+Pxs=1520,728,1520,736
+
+[Wire]
+Pxs=1592,760,1624,760
+
+[Wire]
+Pxs=1624,696,1624,760
+
+[Wire]
+Pxs=1504,696,1504,728
+
+[Wire]
+Pxs=2168,616,2168,624
+
+[Wire]
+Pxs=1920,536,1920,560
+
+[Wire]
+Pxs=2016,528,2016,560
+
+[Comp]
+Name=Resistor
+Px=2016,576
+Rot=1
+
+[Attr]
+ON=8,11,PART
+V=R75
+Style=8192
+
+[Attr]
+ON=8,25,RESISTANCE
+V=23.7k
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Comp]
+Name=Capacitor
+Px=2000,560
+Rot=2
+
+[Attr]
+ON=-49,-26,PART
+V=C130
+Style=8192
+
+[Attr]
+ON=-40,-40,CAPACITANCE
+V=60u
+Style=8192
+
+[Attr]
+ON=0,0,PACKAGE
+V
+
+[Wire]
+Pxs=2000,560,2016,560
+
+[Wire]
+Pxs=2016,560,2016,576
+
+[Wire]
+Pxs=1920,560,1952,560
+
+[Wire]
+Pxs=1920,560,1920,760
+
+[Wire]
+Pxs=1624,760,1920,760
+
+[Wire]
+Pxs=2016,624,2016,656
+
+[Wire]
+Pxs=2016,656,2024,656
+
+[Wire]
+Pxs=1504,696,1624,696
+
+[Wire]
+Pxs=1504,728,1520,728
+
+[Wire]
+Pxs=1456,624,1456,784
+
+[Wire]
+Pxs=1456,784,1520,784
+
+[Wire]
+Pxs=832,352,880,352
+
+[Grid Text]
+Text="Note simulating with MMBFJ112 but 111 fitted in prototype"
+Text="111  Idds = 20mA@15v , 50r RDS(On), 3v@1uA VGS(off) @ Id"
+Text="112  Idds = 5mA@15v , 30r RDS(On), 1v@1uA VGS(off) @ Id"
+Text=""
+Text="MMBFJ110 may be best choice of this range"
+Text="Consider using Dual JFET NSVJ6904DSB6 or similar"
+Px=440,680
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="AC approx 100mV p-p at 0dBm"
+Text="DC -900mv approx but"
+Text="changes in some serial no"
+Text="reduce to closer to 650mV"
+Px=1992,272
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="1"
+Px=1936,264
+Height=-21
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="This Part is 1st Amplifier in meter"
+Px=1704,80
+Height=-18
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=2024,656
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="SGND"
+Px=1088,144
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Vcoll"
+Px=1184,272
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Vemit"
+Px=1160,408
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Zero_adj"
+Px=1064,88
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Chop1"
+Px=808,176
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VC"
+Px=1424,96
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="SGND"
+Px=1544,224
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Chop2"
+Px=608,160
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Chop_out"
+Px=832,352
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Vin"
+Px=296,360
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="Vout"
+Px=1928,304
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="SGND"
+Px=2168,616
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="SGND"
+Px=1288,536
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=1744,656
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VC"
+Px=48,32
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Page=3
+CBorder=None
+
+[Grid Text]
+Text="VC"
+Px=1512,336
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=112,32
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+Page=3
+CBorder=None
+
+[Grid Text]
+Text="VE"
+Px=1512,272
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VC1"
+Px=1552,792
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Grid Text]
+Text="VE1"
+Px=1552,728
+GridSnap=True
+JustifyH=Left
+JustifyV=Bottom
+CBorder=None
+
+[Schematic]
+CurrentSection 0=0
+CurrentSection 1=0
+CurrentSection 2=0
+CurrentSection 3=0
+Splitter.xs=0
+Splitter.ys=0
+TextQuad=4099
+Scale=1
+GridUser=10
+ShapeGroups="Main","Euro","Polarity","Main1","Main11","Electrolytic","GroundArrow","DeMorgan"
+CalcRMS=False
+CalcAVG=False
+CalcPeak=False
+CalcVoltage=True
+DisplayMeasure=Last
+ShareScales=True
+
+[Tools]
+Pos=Top
+FILESAVEASOLD=No
+BOM=No
+FILEPCB=No
+PROBE=Yes
+SELECT=Yes
+PAN=Yes
+COMP=Yes
+TEXT=Yes
+WIRE=Yes
+WIRED=Yes
+BUS=Yes
+GRAPHIC=Yes
+FLOWCHART=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+PARALLELOGRAM=No
+FC_PROCESS=No
+FC_ALT_PROCESS=No
+FC_DECISION=No
+FC_DATA=No
+FC_PREDEFPROCESS=No
+FC_INTERNALSTORAGE=No
+FC_DOCUMENT=No
+FC_MULTIDOCUMENT=No
+FC_TERMINATOR=No
+FC_PREPARATION=No
+FC_MANUALINPUT=No
+FC_MANUALOPERATION=No
+FC_CONNECTOR=No
+FC_OFFPAGECONNECTOR=No
+FC_PUNCHCARD=No
+FC_PUNCHEDTAPE=No
+FC_SUMMING_JUNCTION=No
+FC_OR=No
+FC_COLLATE=No
+FC_SORT=No
+FC_EXTRACT=No
+FC_MERGE=No
+FC_STORED_DATA=No
+FC_DELAY=No
+FC_SAS=No
+FC_MAGNETIC_DISK=No
+FC_DAS=No
+FC_DISPLAY=No
+SPREAD_SHEET=Yes
+POLYCLOS=No
+POLYOPEN=No
+FLAG=Yes
+INFO=Yes
+HELP=Yes
+HELP_SPICE=No
+LINK=Yes
+CHECK=Yes
+REGION_ENABLE=Yes
+TITLE_BLOCK=Yes
+DIGTRC=No
+DIGTRC2=No
+BUILD_COMMAND=Yes
+DIGALL=No
+GRIDTEXT=Yes
+COMPTEXT=Yes
+NODE=Yes
+MEASURED=Yes
+NODEV=Yes
+CURRENT=Yes
+POWER=Yes
+CONDITIN=Yes
+PIN=Yes
+CONNWARN=Yes
+CROSS=Yes
+GRID=Yes
+BORDER=Yes
+BORDERONE=Yes
+TITLE=Yes
+RUBBER=Yes
+PROPERTY=Yes
+STEP=Yes
+MIRROR=Yes
+ROTATE=Yes
+FLIPY=Yes
+FLIPX=Yes
+CIR_MAKEMACRO=No
+CLEARCUTWIRE=No
+CLIPBOARDCIRPAGE2BMM=No
+FINDCOMP=Yes
+FIND=Yes
+REPEAT=No
+REPLACE=No
+MODEL=Yes
+CIR2CKT=Yes
+ATTDISP=Yes
+ENABLE=Yes
+DISABLE=Yes
+ENABLE_WITH=Yes
+TOFRONT=Yes
+TOBACK=Yes
+SELNEXT=Yes
+PAGEADD=Yes
+PAGEADDTEXT=No
+ADDSECTION=No
+PAGEDEL=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALECIR=Yes
+GOTOFLAG=Yes
+UPLEVEL=Yes
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+DM_LAST=No
+DM_RMS=No
+DM_AVG=No
+DM_PEAK=No
+GRID_NONE=No
+GRID_NORMAL=No
+GRID_BOLD_5=No
+GRID_BOLD_6=No
+GRID_BOLD_USER=No
+GRAPH_PAPER=No
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+RENAMEDEFINE=No
+RENAMECMP=No
+ATTALIGN=No
+RESETNODEPOS=No
+FIT2STANDARD=No
+NODESNAP=No
+MOVETEXT=No
+TEXTINC=No
+TOGGLETEXT=No
+TOGGLEMODE=No
+TOLERANCE=No
+ALIGNAB=No
+ALIGNLEFT=Yes
+ALIGNCENTER=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNMIDDLES=Yes
+ALIGNBOTTOM=Yes
+
+[Section]
+Index=0
+Name="sim"
+Type=Main
+Enable=True
+CurrentPage 0=0
+CurrentPage 1=0
+CurrentPage 2=0
+CurrentPage 3=0
+TabSize 0=425
+TabSize 1=425
+TabSize 2=425
+TabSize 3=425
+
+[Page]
+Index=0
+Section=0
+Print=True
+Enable=True
+Name=Main
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+SB 3=217,0
+Scale 3=0.66666666666666663
+Px=799,328
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#008000
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=1
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Text
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=2
+Section=0
+Type=Text
+Print=False
+Enable=True
+Name=Models
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Page]
+Index=3
+Section=0
+Print=True
+Enable=True
+Name=Power Supplies
+PrinterScale=1
+Scale 0=1
+Scale 1=1
+Scale 2=1
+Scale 3=1
+Px=111,55
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Grid Text Color=Height=-12,FStyle=0,Color=#0000FF,Name=Verdana
+Grid Text RTF=False
+Grid Text Angle=0
+Grid Text GridSnap=True
+Grid Text PinIt=False
+Grid Text JustifyH=Left
+Grid Text JustifyV=Bottom
+Grid GradientColor2=None
+Grid OutlineThickness=1
+Grid OutlineColor=None
+Component Color=#0000FF
+Attribute Text=Height=-12,FStyle=0,Color=#008000,Name=Verdana
+Wire Color=#008000
+Bus Color=#008000
+Pin Connection=Height=-10,FStyle=0,Color=#FF0000,Name=Arial
+Pin Marker Color=#008000
+Node Number=Height=-11,FStyle=0,Color=#FF00FF,Name=Arial
+Node Voltage Color=Height=-11,FStyle=0,Color=#000000,Name=Arial
+Dynamic AC Voltage Color=#E4E4E4
+Text Banner Text=Height=-15,FStyle=0,Color=#800000,Name=Arial
+Title Block Background=#C0C0C0
+Current=Height=-11,FStyle=0,Color=#0000FF,Name=Arial
+Power/Condition=Height=-11,FStyle=0,Color=#FF0000,Name=Arial
+Digital Path Color=#FF0000
+Title Block Border=#000000
+Disabled	Color=#C0C0C0
+Search Color=#FFFF00
+Grid Color=#000000
+Graph Paper=#E4E4E4
+Digital 0 Color=#000000
+Digital R Color=#FFFF00
+Digital F Color=#FFFF00
+Digital 1 Color=#FF0000
+Digital X Color=#C0C0C0
+Digital Z Color=#808080
+Block Select Color=#51F998
+
+[Page]
+Index=4
+Section=0
+Type=Info
+Print=False
+Enable=True
+Name=Info
+Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Comment Color=#008000
+WinBackGround Color=#FFFFFF
+Disabled	Color=#C0C0C0
+KeyWord Color=#0000FF
+Error	Color=#FF0000
+Search Color=#FFFF00
+
+[Text Area]
+Section=0
+Page=1
+
+[Text Area]
+Section=0
+Page=2
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBF4091 NJF (ALPHA=1.0E-5 BETA=2.488E-3 BETATCE=-0.5 CGD=6.9860E-12
+Text=+ CGS=8.1234E-12 LAMBDA=0.00011438 M=0.36762 PB=1.2 RD=1 RS=1 VK=1.0
+Text=+ VTO=-7.52682 VTOTC=-2.50E-3)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBF4092 NJF (ALPHA=1.0E-5 BETA=1.488E-3 BETATCE=-0.5 CGD=6.9860E-12
+Text=+ CGS=8.1234E-12 LAMBDA=0.00011438 M=0.36762 PB=1.2 RD=1 RS=1 VK=1.0
+Text=+ VTO=-7.52682 VTOTC=-2.50E-3)
+Text=*** From file C:\MC12\library\DIODE.LIB
+Text=.MODEL 1N4148 D (BV=100 CJO=1.337P IS=8N M=316.713M N=2.011 RL=3.521G
+Text=+ RS=649.339M TT=8.953N VJ=9.477)
+Text=*** From file C:\MC12\library\ZETEX.LIB
+Text=.MODEL ZV952V2 D (BV=2.37 CJO=31E-12 IBV=1E-3 IS=6.38E-16 ISR=1.8E-12 M=1.4
+Text=+ NR=1.55 RS=0.46 TT=18.5E-9 VJ=2.37)
+Text=*** From file C:\MC12\library\ZETEX.LIB
+Text=.MODEL ZV953V2 D (BV=2.37 CJO=73E-12 IBV=1E-3 IS=1.5E-15 ISR=1.8E-12 M=1.4
+Text=+ NR=1.55 RS=0.2 TT=17E-9 VJ=2)
+Text=*** From file C:\MC12\library\ZETEX.LIB
+Text=.MODEL ZV950V2 D (BV=25 CJO=15.5E-12 IBV=1E-3 IS=3.18E-16 ISR=1.8E-12 M=1.4
+Text=+ NR=1.55 RS=0.94 TT=15E-9 VJ=2)
+Text=*** From file C:\MC12\library\UTILITY.LBR
+Text=*** 5V Square Wave
+Text=.MODEL SQUARE PUL (P1=0 P2=0n P3=4.5m P4=4.5m P5=9m VONE=-9)
+Text=*** From file C:\MC12\library\M_SMALL.LIB
+Text=.MODEL MMBF4393LT1 NJF (AF=0.2 BETA=0.0190655 CGD=8.23801E-12 CGS=2.94972E-12
+Text=+ FC=0.5 IS=1E-14 KF=1E-20 LAMBDA=0.0227922 PB=0.18649 RD=76.4299 RS=38.7311
+Text=+ VTO=-1.36506)
+Text=*** From file C:\MC12\library\MSBJT.LBR
+Text=*** NPN General purpose transistor
+Text=.MODEL 2N3904 NPN (BF=326.427 BR=528.632m CJC=3.66441p CJE=4.42095p
+Text=+ IKF=26.7378m IKR=980.247 IS=10.0184f ISC=100p ISE=999.933f ITF=10.1029m
+Text=+ MJC=300m MJE=423.145m NE=1.72338 NF=1.01772 RE=1.47525 TF=477.297p
+Text=+ TR=595.818n VAF=101.811 VJC=700.503m VJE=1 VTF=10 XTF=500.027m)
+Text=*** From file C:\MC12\library\M_POWBJT.LIB
+Text=.MODEL MJE15032 NPN (BF=86.8313 BR=5.59346 CJC=3.00108E-10 CJE=3.05969E-09
+Text=+ EG=1.206 FC=0.534651 IKF=9.1678 IKR=5.15023 IRB=0.1 IS=3.7344E-10 ISC=4E-13
+Text=+ ISE=9.2499E-12 ITF=0.999982 MJC=0.40991 MJE=0.352663 MJS=0.5 NC=4 NE=3.28127
+Text=+ NF=1.23974 NR=1.33161 RB=9.54492 RBM=0.1 RC=0.0931741 RE=0.000568481
+Text=+ TF=4.94819E-09 TR=1E-07 VAF=31.5491 VAR=2.1791 VJC=0.600021 VJE=0.648491
+Text=+ VJS=0.75 VTF=1.0001 XCJC=0.8 XTB=0.737036 XTF=1.50001 XTI=1.04983)
+Text=*** From file C:\MC12\library\ON_BJT.LIB
+Text=.MODEL MJE13005 NPN (BF=34.4393 BR=2.23806 CJC=1.68882E-10 CJE=1.38055E-09
+Text=+ EG=1.05 FC=0.8 IKF=4.47595 IKR=9.69329 IRB=0.1 IS=2.58674E-10 ISC=5.5E-13
+Text=+ ISE=3.99999E-12 ITF=142.836 MJC=0.347144 MJE=0.354762 MJS=0.5 NC=3.9375
+Text=+ NE=3.5 NF=0.85 NR=0.75 RB=2.24801 RBM=0.1 RC=0.105551 RE=0.000429335 TF=1E-08
+Text=+ TR=1.91316E-06 VAF=23.8713 VAR=2.31727 VJC=0.4 VJE=0.4 VJS=0.75 VTF=0.1
+Text=+ XCJC=0.1 XTB=0.150853 XTF=0.05 XTI=1)
+Text=*** From file C:\MC12\library\MPBJT.LIB
+Text=.MODEL MJE12007 NPN (BF=33.38874018935 BR=18.749860161962M CJC=229.02315077479P
+Text=+ CJE=2P FC=500.000000295543M IKF=387.325806463791M IKR=21.266813120148M
+Text=+ IS=9.84132504679F ISC=99.735591357102P ISE=1.003107331888P
+Text=+ ITF=6.253122957253M MJC=558.065806250867M MJE=500M NC=2.000000002758
+Text=+ NE=1.24009351669 NF=906.913957859714M RE=113.479099192211M
+Text=+ TF=29.075246204843N TR=10N VAF=100 VJC=700M VTF=10.000001474531
+Text=+ XTF=500.006106618253M)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBF4117 NJF (ALPHA=1.0E-5 BETA=6.988E-5 BETATCE=-0.43 CGD=1.0860E-12
+Text=+ CGS=1.1234E-12 ISR=3.0E-12 LAMBDA=0.0011438 M=0.12762 PB=0.8 RD=1 RS=1 VK=1.0
+Text=+ VTO=-1.0 VTOTC=-1.35E-3)
+Text=*** From file C:\MC12\library\EUROPE.LBR
+Text=*** NPN AF transistor
+Text=.MODEL BC108C NPN (BF=472.766296 BR=159.300998m CJC=6.117156p CJE=11.82627p
+Text=+ IKF=201.584915 IKR=981.821106 IS=10.00035f ISC=.00005167395f ISE=63.855303p
+Text=+ ITF=9.95368m MJC=361.359m MJE=673.545003m NE=3 NF=912.846446m RC=95.275767m
+Text=+ RE=2 TF=395.633026p TR=10n VAF=29.033337 VJC=949.695349m VJE=1 VTF=10
+Text=+ XTF=500.000119m)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N2609 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P
+Text=+ CGS=11.580672P KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M
+Text=+ VTO=-5.038864)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL JMMBFJ175LT1 PJF (AF=0.2 BETA=0.00388105 CGD=1.66048E-11 CGS=7.1608E-12
+Text=+ FC=0.5 IS=3.40344E-10 KF=1E-20 LAMBDA=0.00751457 PB=0.757866 RD=114.077
+Text=+ RS=42.5978 VTO=-4.25882)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL JMMBFJ177LT1G PJF (AF=0.2 BETA=0.006919 CGD=1.49992E-11 CGS=1.61697E-11
+Text=+ FC=0.5 IS=1.3336E-11 KF=1E-20 LAMBDA=0.0272649 PB=0.363701 RD=58.8254
+Text=+ RS=35.9102 VTO=-1.2599)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBF5460 PJF (AF=500.449309M BETA=149.406917M CGD=3.633806P
+Text=+ CGS=8.193691P KF=231.313289F LAMBDA=37.5M PB=4.447909 RS=509.288793
+Text=+ VTO=-3.180721)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBF5461 PJF (AF=500.449309M BETA=149.406917M CGD=3.633806P
+Text=+ CGS=8.193691P KF=231.313289F LAMBDA=37.5M PB=4.447909 RS=509.288793
+Text=+ VTO=-3.180721)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBF5462 PJF (AF=500.449309M BETA=149.406917M CGD=3.633806P
+Text=+ CGS=8.193691P KF=231.313289F LAMBDA=37.5M PB=4.447909 RS=509.288793
+Text=+ VTO=-3.180721)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBFJ174 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P
+Text=+ CGS=11.580672P KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M
+Text=+ VTO=-5.038864)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBFJ175 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P
+Text=+ CGS=11.580672P KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M
+Text=+ VTO=-5.038864)
+Text=*** From file C:\MC12\library\M_SMALL.LIB
+Text=.MODEL MMBFJ175LT1 PJF (AF=0.2 BETA=0.00388105 CGD=1.66048E-11 CGS=7.1608E-12
+Text=+ FC=0.5 IS=3.40344E-10 KF=1E-20 LAMBDA=0.00751457 PB=0.757866 RD=114.077
+Text=+ RS=42.5978 VTO=-4.25882)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBFJ176 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P
+Text=+ CGS=11.580672P KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M
+Text=+ VTO=-5.038864)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL P1086 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P CGS=11.580672P
+Text=+ KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M VTO=-5.038864)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL P1087 PJF (AF=499.862781M BETA=305.170017U CGD=24.919028P CGS=11.580672P
+Text=+ KF=2.799219E-018 LAMBDA=100M PB=636.46948M RS=278.933741M VTO=-5.038864)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBF4093 NJF (ALPHA=1.0E-5 BETA=9.188E-4 BETATCE=-0.5 CGD=6.9860E-12
+Text=+ CGS=8.1234E-12 LAMBDA=0.00011438 M=0.36762 PB=1.2 RD=1 RS=1 VK=1.0
+Text=+ VTO=-7.52682 VTOTC=-2.50E-3)
+Text=*** From file C:\MC12\library\LINEARSYSTEMS.LIB
+Text=.MODEL LSK389C NJF (BETA=0.0278541 CGD=4.22E-11 CGS=4.23E-11 FC=0.5
+Text=+ IS=2.45217E-14 LAMBDA=0.0122435 PB=0.9265487 RD=12 RS=5.8 VTO=-0.800434)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3070 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3071 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3368 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3369 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3458 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3687 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3819 NJF (AF=499.953M BETA=286.155879M CGD=1.542479P CGS=2.567003P
+Text=+ KF=7.905907F LAMBDA=20M PB=1.49 RS=239.291052 VTO=-3.061588)
+Text=*** From file C:\MC12\library\MSBJT.LBR
+Text=*** NPN Switching transistors
+Text=.MODEL 2N3506 NPN (BF=199.954 BR=1.00001m CJC=183.218p CJE=793.459p
+Text=+ IKF=812.767m IKR=10.0001m IS=10.0052f ISC=99.9231p ISE=1.0645p ITF=14.9812m
+Text=+ MJC=558.066m MJE=584.153m NE=1.49625 NF=995.168m RC=73.2975m RE=376.252m
+Text=+ TF=1.56036n TR=14.9832m VAF=100 VJC=700m VJE=700m VTF=10 XTF=499.984m)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3821 NJF (AF=500.127534M BETA=28.519268M CGD=4.191359P CGS=5.347658P
+Text=+ KF=0.01401F LAMBDA=10M PB=967.073084M RS=177.127857 VTO=-2.713168)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3822 NJF (AF=500.127534M BETA=28.519268M CGD=4.191359P CGS=5.347658P
+Text=+ KF=0.01401F LAMBDA=10M PB=967.073084M RS=177.127857 VTO=-2.713168)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3823 NJF (AF=499.953M BETA=286.155879M CGD=1.542479P CGS=2.567003P
+Text=+ KF=7.905907F LAMBDA=20M PB=1.49 RS=239.291052 VTO=-3.061588)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3686 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3459 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3685 NJF (AF=500.524773M BETA=2.953635M CGD=2.783703P CGS=3.164213P
+Text=+ KF=4.997636E-019 LAMBDA=9.999999M PB=1.937899 RS=286.385332 VTO=-2.342435)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3922 NJF (AF=500M BETA=1.853321M CGD=18.154008P CGS=29.660402P
+Text=+ KF=1.000000E-018 LAMBDA=1M PB=53.489959M RS=56.779918M VTO=-1.661476)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3958 NJF (AF=500.784765M BETA=1.619123M CGD=1.798407P CGS=3.810991P
+Text=+ KF=2.813542E-019 LAMBDA=7M PB=167.5348M RS=149.945459 VTO=-2.254224)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3967 NJF (AF=500.127534M BETA=28.519268M CGD=4.191359P CGS=5.347658P
+Text=+ KF=0.01401F LAMBDA=10M PB=967.073084M RS=177.127857 VTO=-2.713168)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3970 NJF (AF=499.910353M BETA=4.644731M CGD=5.321821P CGS=9.310367P
+Text=+ KF=1.462538E-018 LAMBDA=10M PB=2.449314 RS=2.483091 VTO=-2.81041)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N3971 NJF (AF=499.910353M BETA=4.644731M CGD=5.321821P CGS=9.310367P
+Text=+ KF=1.462538E-018 LAMBDA=10M PB=2.449314 RS=2.483091 VTO=-2.81041)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N4084 NJF (AF=499.994513M BETA=1.532099M CGD=7.326172P CGS=4.948342P
+Text=+ KF=2.820785E-019 LAMBDA=2M PB=521.091522M RS=137.28068 VTO=-2.300306)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N4118 NJF (AF=499.889874M BETA=70.69866U CGD=1.422143P CGS=1.150428P
+Text=+ KF=3.538482E-019 LAMBDA=10M PB=9.999993 RS=1000 VTO=-1.584498)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N4118A NJF (AF=499.889874M BETA=70.69866U CGD=1.422143P CGS=1.150428P
+Text=+ KF=3.538482E-019 LAMBDA=10M PB=9.999993 RS=1000 VTO=-1.584498)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL 2N4119A NJF (AF=499.889874M BETA=70.69866U CGD=1.422143P CGS=1.150428P
+Text=+ KF=3.538482E-019 LAMBDA=10M PB=9.999993 RS=1000 VTO=-1.584498)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL U441 NJF (AF=499.524566M BETA=26.214685M CGD=2.912659P CGS=4.104626P
+Text=+ KF=0.163471F LAMBDA=19.999999M PB=1.644996 RS=107.778399 VTO=-3.907051)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL PN5433 NJF (AF=500.759544M BETA=41.81884M CGD=29.978279P CGS=30.188869P
+Text=+ KF=0.01748F LAMBDA=5M PB=1.395897 RS=2.086457M VTO=-725.792104M)
+Text=*** From file C:\MC12\library\JFET.LIB
+Text=.MODEL MMBFJ309 NJF (AF=500.014338M BETA=1.747581M CGD=7.530502P CGS=7.795544P
+Text=+ KF=1.413534E-018 LAMBDA=29.999998M PB=777.7421M RS=17.536109M VTO=-3.942262)
+Text=*** From file C:\MC12\library\M_SMALL.LIB
+Text=.MODEL MMBFJ309LT1 NJF (AF=0.200092 BETA=0.0055601 CGD=5.35152E-12
+Text=+ CGS=5.07189E-12 FC=0.5 IS=1.3336E-12 KF=9.99982E-21 LAMBDA=0.02184 PB=2.41896
+Text=+ RD=0.1 RS=0.1 VTO=-1.7)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBFJ112 NJF (AF=1.1208E-3 ALPHA=2.5430E-6 BETA=5.002E-003 BETATCE=-0.46
+Text=+ CGD=6.9920E-12 CGS=13.267E-12 FC=0.5 IS=181.30E-15 ISR=1.7470E-12
+Text=+ KF=16.860E-27 LAMBDA=0.00398 M=0.49314 PB=1.4440 RD=0.334 RS=0.334 VK=152.20
+Text=+ VTO=-1.6800 VTOTC=-2.10E-3)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBFJ201 NJF (AF=0.55664 ALPHA=6.80E-6 BETA=0.00198 BETATCE=-0.46
+Text=+ CGD=1.998E-012 CGS=1.258E-012 IS=1.1937E-12 ISR=3.7937E-13 KF=5.622E-018
+Text=+ LAMBDA=0.0052 M=0.280 NR=1 PB=0.515 RD=18.049 RS=18.049 VK=40 VTO=-3.95
+Text=+ VTOTC=-2.1000E-3)
+Text=*** From file C:\MC12\library\MSBJT.LBR
+Text=*** NPN General purpose transistor
+Text=.MODEL 2N2222 NPN (BF=200.601 BR=155.257m CJC=36.6437p CJE=42.4239p IKF=1.77131
+Text=+ IKR=995.298 IS=10.017f ISC=9.15251p ISE=999.157f ITF=10.2871m MJC=558.066m
+Text=+ MJE=642.887m NE=1.83441 NF=979.99m RE=668.817m TF=407.084p TR=2.26225u
+Text=+ VAF=100 VJC=700m VJE=700m VTF=10 XTF=500.021m)
+Text=*** From file C:\MC12\library\MPBJT.LIB
+Text=.MODEL MJE13002 NPN (BF=54.690010619121 BR=175.039727193028M
+Text=+ CJC=65.324721244812P CJE=470.312845620747P FC=500.000000689595M
+Text=+ IKF=396.026322424384M IKR=2.94664313131 IS=14.742464284553F
+Text=+ ISC=99.999425981847P ISE=733.562805367392F ITF=10.557211889412M
+Text=+ MJC=347.310298235196M MJE=353.758051288424M NC=2.000000002364
+Text=+ NE=1.275793682845 NF=926.558277879762M RE=106.776587684428M
+Text=+ TF=31.526115542948N TR=47.101363642279U VAF=100 VJC=700.000000064161M
+Text=+ VJE=752.294720158486M VTF=9.999999749778 XTF=499.995317453514M)
+Text=*** From file C:\MC12\library\MPBJT.LIB
+Text=.MODEL MJE13003 NPN (BF=54.690010619121 BR=175.039727193028M
+Text=+ CJC=65.324721244812P CJE=470.312845620747P FC=500.000000689595M
+Text=+ IKF=396.026322424384M IKR=2.94664313131 IS=14.742464284553F
+Text=+ ISC=99.999425981847P ISE=733.562805367392F ITF=10.557211889412M
+Text=+ MJC=347.310298235196M MJE=353.758051288424M NC=2.000000002364
+Text=+ NE=1.275793682845 NF=926.558277879762M RE=106.776587684428M
+Text=+ TF=31.526115542948N TR=47.101363642279U VAF=100 VJC=700.000000064161M
+Text=+ VJE=752.294720158486M VTF=9.999999749778 XTF=499.995317453514M)
+Text=*** From file C:\MC12\library\ON_BJT.LIB
+Text=.MODEL MJE13007 NPN (BF=25.076 BR=2.5076 CJC=2.58883E-10 CJE=2.54231E-09
+Text=+ EG=1.12591 FC=0.8 IKF=6.6012 IKR=3.36691 IRB=0.1 IS=7.66503E-11 ISC=4.75E-13
+Text=+ ISE=7.00002E-12 ITF=0.420992 MJC=0.457064 MJE=0.262055 MJS=0.5 NC=3.96875
+Text=+ NE=3.375 NF=1.13982 NR=1.1326 RB=0.964833 RBM=0.1 RC=0.124878 RE=0.00064432
+Text=+ TF=1E-08 TR=3.35784E-06 VAF=27.6027 VAR=3.4903 VJC=0.747204 VJE=0.99 VJS=0.75
+Text=+ VTF=3.29645 XCJC=0.699978 XTB=0.124275 XTF=1.76694 XTI=1)
+Text=*** From file C:\MC12\library\ON_BJT.LIB
+Text=.MODEL MJE18006 NPN (BF=28.8898 BR=2.88898 CJC=3.77665E-10 CJE=2.99068E-09
+Text=+ EG=1.05 FC=0.8 IKF=2.3687 IKR=2.31654 IRB=0.1 IS=1E-09 ISC=4.95445E-13
+Text=+ ISE=3.961E-12 ITF=0.473365 MJC=0.516978 MJE=0.437251 MJS=0.5 NC=3.98394
+Text=+ NE=3.49212 NF=0.98381 NR=0.881962 RB=1.77921 RBM=0.1 RC=0.175697
+Text=+ RE=0.000259074 TF=1E-08 TR=4.04817E-07 VAF=35.2416 VAR=3.52521 VJC=0.4
+Text=+ VJE=0.633882 VJS=0.75 VTF=2.78646 XCJC=0.799895 XTB=0.1 XTF=1.80151 XTI=1)
+Text=*** From file C:\MC12\library\ON_BJT.LIB
+Text=.MODEL MJE18008 NPN (BF=16.2807 BR=1.62807 CJC=3.83049E-10 CJE=4.65558E-09
+Text=+ EG=1.05 FC=0.8 IKF=8.91667 IKR=3.65604 IRB=0.1 IS=1E-09 ISC=4.43005E-13
+Text=+ ISE=6.94438E-12 ITF=0.338593 MJC=0.456299 MJE=0.330981 MJS=0.5 NC=3.99216
+Text=+ NE=3.38189 NF=0.85 NR=0.82571 RB=2.7149 RBM=0.1 RC=0.0871278 RE=0.0001
+Text=+ TF=1E-08 TR=9.46239E-06 VAF=17.9534 VAR=5.01712 VJC=0.4 VJE=0.446548 VJS=0.75
+Text=+ VTF=3.88526 XCJC=0.799262 XTB=0.121787 XTF=1.83198 XTI=1)
+Text=*** From file C:\MC12\library\M_POWBJT.LIB
+Text=.MODEL MJE18204 NPN (BF=29.61 BR=3.24 CJC=1.682E-10 CJE=1.77E-09 FC=0.92
+Text=+ IKF=0.755 IKR=0.221 IRB=0.0002927 IS=3.04E-13 ISC=4.122E-09 ISE=6.938E-12
+Text=+ ITF=0.12 MJC=0.4561 MJE=0.3257 NC=1.739 NE=1.794 NF=0.998 NR=1.007 PTF=1.4
+Text=+ RB=8.29 RBM=0.0885 RC=0.05501 RE=0.04106 TF=9.5E-09 TR=2.5E-06 VAF=2353
+Text=+ VAR=2965 VJC=0.5183 VJE=0.647 VJS=0.75 VTF=0.135 XTB=0.77 XTF=9 XTI=5.219)
+Text=*** From file C:\MC12\library\ON_BJT.LIB
+Text=.MODEL MJL21196 NPN (BF=72.017 BR=4.98511 CJC=5E-10 CJE=1.38873E-08 EG=1.11401
+Text=+ FC=0.8 IKF=9.99333 IKR=4.50711 IRB=0.1 IS=9.91162E-11 ISC=3.25E-13
+Text=+ ISE=7.00002E-12 ITF=2.83908 MJC=0.23891 MJE=0.436413 MJS=0.5 NC=4 NE=3.375
+Text=+ NF=1.14361 NR=1.21116 RB=9.33972 RBM=0.1 RC=0.0378089 RE=0.000642966 TF=1E-08
+Text=+ TR=1E-07 VAF=25.2734 VAR=6.29246 VJC=0.95 VJE=0.4 VJS=0.75 VTF=3.13272
+Text=+ XCJC=0.800721 XTB=0.1047 XTF=50.3784 XTI=1.03131)
+Text=*** From file C:\MC12\library\ON_SEMI.LIB
+Text=.MODEL MMBFJ202 NJF (AF=0.55664 ALPHA=6.80E-6 BETA=0.00198 BETATCE=-0.46
+Text=+ CGD=1.998E-012 CGS=1.258E-012 IS=1.1937E-12 ISR=3.7937E-13 KF=5.622E-018
+Text=+ LAMBDA=0.0052 M=0.280 NR=1 PB=0.515 RD=18.049 RS=18.049 VK=40 VTO=-3.95
+Text=+ VTOTC=-2.1000E-3)
+Text=*** From file C:\MC12\library\ROHM_TRANSISTOR.LIB
+Text=.MODEL 2SC3837K NPN (BF=90.208 BR=4.2997 CJC=1.5434E-12 CJE=2.4548E-12
+Text=+ IKF=.22544 IKR=.78981 IS=2.0000E-15 ISC=2.1585E-15 ISE=2.0000E-15
+Text=+ ITF=72.879E-3 MJC=.20257 MJE=.24183 NC=1.0516 NE=1.3538 NK=.98009 RB=15.286
+Text=+ RC=2.4700 TF=90.277E-12 TR=112.54E-9 VAF=69.220 VAR=100 VTF=24.898 XTB=1.5000
+Text=+ XTF=.9268)
+Text=*** From file C:\MC12\library\CS.LIB
+Text=.MODEL CMSH3-20 D (BV=20.0 CJO=439P IBV=500U IS=714N M=0.333 N=0.984 RS=23.4M
+Text=+ TT=4.32P)
+Text=*** From file C:\MC12\library\EDIODE.LBR
+Text=*** General Purpose Diode
+Text=.MODEL BAV100 D (BV=50 CJO=1.390236p IBV=100.000001p IS=143.381563f
+Text=+ M=300.000012m N=1.229247 RL=500.000704MEG RS=627.080858m TT=72.134753n
+Text=+ VJ=10.651968)
+Text=*** From file C:\MC12\library\DIODESINC.LIB
+Text=.MODEL BAT40V D (BV=2.370 CJO=11.9P IBV=10.0U IS=82.9N M=0.333 N=1.14 RS=0.373
+Text=+ TT=7.20N)
+Text=*** From file C:\MC12\library\PH_DIODE.LIB
+Text=.MODEL BZX585-B3V3 D (BV=3.3 CJO=3.162E-10 FC=0.5 IBV=0.005 IS=1.033E-15
+Text=+ M=0.3164 N=1.001 RS=0.387 VJ=0.6687)
+Text=*** From file C:\MC12\library\PH_DIODE.LIB
+Text=.MODEL BZX585-B2V7 D (BV=2.7 CJO=3.518E-10 FC=0.5 IBV=0.005 IS=1.033E-15
+Text=+ M=0.3174 N=1.001 RS=0.387 VJ=0.6816)
+Text=*** From file C:\MC12\library\PH_DIODE.LIB
+Text=.MODEL BZX585-B2V4 D (BV=2.37 CJO=3.615E-10 FC=0.5 IBV=0.005 IS=1.033E-15
+Text=+ M=0.2715 N=1.001 RS=0.387 VJ=0.5762)
+Text=.MODEL SQUARE1 PUL (P1=0 P2=0m P3=4.5m P4=4.5m P5=9m VONE=0 VZERO=-9)
+
+[InfoPage]
+InfoPage=True
+Warnings=True
+System=True
+Defines=True
+Array=True
+Model=True
+Measure=True
+MacroSubckt=True
+NotUsed=True
+ComponentCounts=True
+VariablizePaths=False
+DontShowPaths=False
+SimulationLog=True
+
+[Transient]
+WinID=1
+Window Placement=0,1, -1,-1, -8,-31, 0,0,904,1192
+Font=Height=-19,FStyle=0,Color=#0000FF,Name=Arial
+WinBackGround Color=#FFFFFF
+Select Color=#FF0000
+Anchor Color=#000000
+Select Box Color=#000080
+Title
+AutoTitle=Yes
+Grid Color=#808080
+Grid Weight=1
+Grid Pattern=Dot6
+Tracker Foreground=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Tracker Background=#FFFF00
+Baseline color=#0000FF
+BaseLine Weight=1
+CurveFit color=#FF0000
+CurveFit Weight=2
+CurveFit Pattern=Dash
+Static Grids=False
+PlusMark=False
+MinorLog25=Off
+LabelMinor=Off
+DataPoints=False
+Token=False
+Ruler=False
+XAxisGrids=True
+YAxisGrids=True
+MinorLogGrids=True
+BaseLine=False
+AlignZ=True
+Align Cursors=True
+TagFormatX=3
+TagFormatY=3
+FormulaFormat=2
+EndMode=SCALE
+Graph Background=#FFFFFF
+Tracker Intercept=False
+Tracker Mouse=True
+Tracker Cursor=True
+Tracker Cursor BranchInfo=False
+Horizontal Cursor=False
+Same Y Scales=Yes
+Enable X Scaling=True
+Enable Y Scaling=True
+Keep X Scales The Same=True
+Number of Grids X=5
+Number of Grids Y=5
+Cursor Select Color Primary=#C0C0C0
+Cursor Select Color Secondary=#FF0000
+Data Point Labels Color Fore=Height=-15,FStyle=0,Color=#000000,Name=Arial
+Data Point Labels Color Back=#FFFF00
+OperPoint=True
+OperPointOnly=False
+AutoScaleRanges=True
+FixedTimeStep=False
+DoPSS=False
+PSS_Periods="1"
+PSS_Iterations="5"
+PSS_Error="1u"
+PSS_ShowPlots=True
+FFT_NPts="8192"
+FFT_IncludeDCHarmonic=False
+FFT_AutoScale_Harmonics="10"
+PrinterAutoTile=No
+PrinterBlackBorder=No
+MonMaxShow=6
+MonPageWidth=66
+MonPlotWidth=21
+MonExprXWidth=142
+MonExprYWidth=387
+MonRangeXWidth=90
+MonRangeYWidth=90
+AnimateWait=None
+AnimateWaitTime=500
+AnimatePressAfter=0
+Save_For_Future=No
+Reduce_Display=1
+Reduce_Save=1
+Reduce_ThrowDataOut=0
+Num Out Header Left
+Num Out Header Center="$MC\n$user\n$company\n$Analysis of $name\n$date $time"
+Num Out Header Right
+Num Out Delimiter=32
+Num Out Write=True
+Num Out Write Main Header=True
+Num Out Write Limits=True
+Num Out Write Branch Header=True
+Num Out Write Models=False
+Num Out Write Zero Models=True
+Num Out Write Undefined Models=True
+Num Out Write Operating Point=True
+Num Out Write Measurement Values=True
+Num Out Write Tolerance Detail=True
+Num Out Write Values=True
+Num Out Write Waveform Header=True
+Num Out Allow Dup Y Expr=False
+Num Out Low="TSTART"
+Num Out High="TMAX"
+Num Out Font=Height=-15,FStyle=0,Color=#000000,Name=Courier New
+Num Out Format=3
+Num Out HideNonSelected=False
+Num Out UseActualDataPoints=False
+AutoSaveWave=False
+Wave Format=16E
+State Variables Format=5E
+Print Individual Pages=False
+
+[Tools]
+Pos=Top
+SELECT=Yes
+PAN=Yes
+GRAPHIC=Yes
+LINE=No
+ELLIPSE=No
+RECT=No
+DIAM=No
+ARC=No
+PIE=No
+TRIANGLE=No
+STAR=No
+LEFTBRK=No
+RIGHTBRK=No
+BOTHBRK=No
+META=Yes
+PARALLELOGRAM=No
+POLYCLOS=No
+POLYOPEN=No
+SCALE=Yes
+CURSOR=Yes
+MEASUREH=Yes
+MEASUREV=Yes
+TAG=Yes
+PTAG=Yes
+TEXT=Yes
+PROPERTY=Yes
+START=Yes
+STOP=Yes
+PAUSE=Yes
+RESUME=No
+DATAPTS=Yes
+TOKENS=Yes
+RULER=Yes
+PLUS=Yes
+XAXIS=Yes
+YAXIS=Yes
+MINORLOG=Yes
+LOG25=Yes
+BASELINE=Yes
+HORIZCUR=Yes
+GOTOX=Yes
+GOTOY=Yes
+GOTOPERF=Yes
+GOTOBRNC=Yes
+CLEAR_ACCUMULATED=Yes
+PDELETE_ALL_PLOTS=Yes
+NEXT=Yes
+NEXTIN=Yes
+PEAK=Yes
+VALLEY=Yes
+HIGH=Yes
+LOW=Yes
+INFLECTN=Yes
+GHIGH=Yes
+GLOW=Yes
+BOTTOM=Yes
+TOP=Yes
+WAVEFORMBUFFER=Yes
+AOUTPUT=Yes
+PKEY=Yes
+ENXSCALE=Yes
+ENYSCALE=Yes
+ZOOMIN=Yes
+ZOOMOUT=Yes
+AUTOSCALE=Yes
+RESTORESCALE=No
+COLOR=Yes
+FONT=Yes
+STYLE=Yes
+SELNEXT=Yes
+NORMALIZE=No
+NORMALIZE_MIN=No
+NORMALIZE_MAX=No
+ADD_TAG_LEFT=No
+ADD_TAG_RIGHT=No
+ADD_HORZ_TAG=No
+ADD_VERT_TAG=No
+ALIGN_CURSORS=No
+ALIGN_CURSORSZ=No
+CURSORTOCLIPBOARD=No
+TRACKER_CURSOR=No
+TRACKER_CURSOR_BRANCHINFO=No
+TRACKER_INTERCEPT=No
+TRACKER_MOUSE=No
+TOFRONT=Yes
+TOBACK=Yes
+SPLITCIRTEXTH=No
+SPLITCIRTEXTV=No
+SPACE_SPLITTERS_EVENLY=No
+NORMALCIR=No
+LABEL_WAVEFORM=No
+LABEL_DATA_POINTS=No
+WFB_ADD_TO_LIMITS=No
+ENVELOPE=No
+SAMEYSCALES=No
+KEEPXSCALESTHESAME=No
+CURVEFIT=No
+ADD_MARKER=No
+SHOWWATCH=No
+BP=No
+TOGGLEMODE=No
+REMOVEALLTEXT=No
+AUTOSCALEX=No
+LABELALLMINOR=No
+ALIGNLEFT=Yes
+ALIGNCENTER=Yes
+ALIGNRIGHT=Yes
+ALIGNTOP=Yes
+ALIGNMIDDLES=Yes
+ALIGNBOTTOM=Yes
+
+[APage]
+Analysis=Transient
+Name="MAIN"
+
+[Monte Carlo Options]
+Analysis=Transient
+Status=Off
+Zero Tolerance=False
+Eliminate Outliers=False
+Distribution=Normal
+Number of Runs=10
+Seed=0
+
+[Limits]
+Analysis=Transient
+TMax=60m
+TStart=0
+TStep=0
+NPts=501
+Temp=27
+RetraceRuns=1
+StateVar=Zero
+RunOption=Normal
+Temperature Type=Linear
+Accumulate Plots=False
+IgnoreExprErrors=False
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=1
+XExp=T
+YExp=v(Chop_out)*1000
+XRng=0.06
+YRng=0.5,-0.75
+Options=LINEARX,LINEARY
+Range Grid X=0.012
+Range Grid Y=0.25
+Enable=Enable
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=5
+XExp=T
+YExp=v(Vemit)
+XRng=0.06
+YRng=0.5,-0.75
+Options=LINEARX,LINEARY
+Range Grid X=0.012
+Range Grid Y=0.25
+Enable=Enable
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=2
+XExp=T
+YExp=v(Vcoll)
+XRng=0.06
+YRng=0.5,-0.75
+Options=LINEARX,LINEARY
+Range Grid X=0.012
+Range Grid Y=0.25
+Enable=Enable
+Line Color=#FF0000
+Text Color=#FF0000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=2
+AliasID=3
+XExp=T
+YExp=v(vout)
+XRng=0.06
+YRng=-0.72,-1.02
+Options=LINEARX,LINEARY
+Range Grid X=0.012
+Range Grid Y=0.06
+Enable=Enable
+Line Color=#008000
+Text Color=#008000
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=4
+XExp=T
+YExp=v(Chop2)
+XRng=0.06
+YRng=6,-9
+Options=LINEARX,LINEARY
+Range Grid X=0.024
+Range Grid Y=3
+Enable=Hide
+Line Color=#FF00FF
+Text Color=#FF00FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[WaveForm]
+Analysis=Transient
+Plt=1
+AliasID=6
+XExp=T
+YExp=v(Chop1)+1
+XRng=0.06
+YRng=6,-9
+Options=LINEARX,LINEARY
+Range Grid X=0.024
+Range Grid Y=3
+Enable=Hide
+Line Color=#0000FF
+Text Color=#0000FF
+Rainbow=False
+VFmtX=3
+VFmtY=3
+ScaleFactorX="None"
+ScaleFactorY="None"
+ScaleUnitsX="Auto"
+ScaleUnitsY="Auto"
+SFmtX=2
+SFmtY=2
+NOFmtX=3E
+NOFmtY=3E
+
+[Limits]
+Analysis=DynamicAC
+FirstValueDisplay=Mag
+SecondValueDisplay=PhaseDeg
+PlaceText=True
+
+[Limits]
+Analysis=DynamicDC
+PlaceText=True
+
+[Pane]
+Analysis=Transient
+CurrentPage 0="MAIN"
+
+[Pane]
+Analysis=AC
+
+[Pane]
+Analysis=DC
+
+[Pane]
+Analysis=HmDistortion
+
+[Pane]
+Analysis=ImDistortion
+
+[Pane]
+Analysis=Stability
+
+[Watch]
+Analysis=Transient
+Format=3
+ExprPercentWidth=80
+
+[WCTolerance]
+Var Width=100
+Nominal Width=72
+Tol Width=152
+Tol Name=Drift
+Col Width Neq=50
+Col Width Pos=50
+Col Width Rnd=50
+
+[WCFiles]
+UseFile=<Library>Standard.tlib
+AVAILABLE_FILE=<Library>Standard.tlib
+
+[OPMethods]
+Analysis=Transient
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=AC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=HmDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=ImDistortion
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=Stability
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicAC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0
+
+[OPMethods]
+Analysis=DynamicDC
+Standard Newton-Raphson=0,0
+Source Stepping=0,0
+Diagonal Gmin Stepping=0,0
+Junction Gmin Stepping=0,0
+Pseudo Transient=0,0

@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 12:35:39 On 07/05/2022
+
+Output: BOM_PartType
+Type  : BOM
+From  : Variant [[No Variations]] of Project [HP_Power_Cal.PrjPcb]
+   Generated File[BOM_PartType-HP_Power_Cal.xls]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 12:36:11 On 07/05/2022
