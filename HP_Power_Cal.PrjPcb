@@ -29,7 +29,7 @@ PushECOToAnnotationFile=1
 DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 ForceUpdateCount=0
-OutputPath=Outputs
+OutputPath=
 LogFolderPath=
 ManagedProjectGUID=
 LinkedManagedProjectGUID=
@@ -129,82 +129,78 @@ DocumentPath=Default Configuration\Outputs\BOM\BOM_PartType-HP_Power_Cal.xls
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Outputs\Design Rule Check - FET Module.html
-DItemRevisionGUID=
-
-[GeneratedDocument3]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Bottom
 DItemRevisionGUID=
 
-[GeneratedDocument4]
+[GeneratedDocument3]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Top
 DItemRevisionGUID=
 
-[GeneratedDocument5]
+[GeneratedDocument4]
 DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.DRR
 DItemRevisionGUID=
 
-[GeneratedDocument6]
+[GeneratedDocument5]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.EXTREP
 DItemRevisionGUID=
 
-[GeneratedDocument7]
+[GeneratedDocument6]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBL
 DItemRevisionGUID=
 
-[GeneratedDocument8]
+[GeneratedDocument7]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBO
 DItemRevisionGUID=
 
-[GeneratedDocument9]
+[GeneratedDocument8]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBS
 DItemRevisionGUID=
 
-[GeneratedDocument10]
+[GeneratedDocument9]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GM5
 DItemRevisionGUID=
 
-[GeneratedDocument11]
+[GeneratedDocument10]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPB
 DItemRevisionGUID=
 
-[GeneratedDocument12]
+[GeneratedDocument11]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPT
 DItemRevisionGUID=
 
-[GeneratedDocument13]
+[GeneratedDocument12]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTL
 DItemRevisionGUID=
 
-[GeneratedDocument14]
+[GeneratedDocument13]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTO
 DItemRevisionGUID=
 
-[GeneratedDocument15]
+[GeneratedDocument14]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTP
 DItemRevisionGUID=
 
-[GeneratedDocument16]
+[GeneratedDocument15]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTS
 DItemRevisionGUID=
 
-[GeneratedDocument17]
+[GeneratedDocument16]
 DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.LDP
 DItemRevisionGUID=
 
-[GeneratedDocument18]
+[GeneratedDocument17]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Outline
 DItemRevisionGUID=
 
-[GeneratedDocument19]
+[GeneratedDocument18]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.REP
 DItemRevisionGUID=
 
-[GeneratedDocument20]
+[GeneratedDocument19]
 DocumentPath=Default Configuration\Outputs\Gerber\FET Module.RUL
 DItemRevisionGUID=
 
-[GeneratedDocument21]
+[GeneratedDocument20]
 DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.TXT
 DItemRevisionGUID=
 
@@ -225,7 +221,7 @@ DocumentReferenceClass1=DocumentReference
 OutputJobFileName1=HP_Power_Cal.OutJob
 
 [Generic_EDE]
-OutputDir=Outputs
+OutputDir=
 
 [OutputGroup1]
 Name=Netlist Outputs
