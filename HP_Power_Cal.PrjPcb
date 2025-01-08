@@ -129,78 +129,82 @@ DocumentPath=Default Configuration\Outputs\BOM\BOM_PartType-HP_Power_Cal.xls
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Bottom
+DocumentPath=Outputs\Design Rule Check - FET Module.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Top
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Bottom
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.DRR
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Courtyard Top
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.EXTREP
+DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBL
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBO
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBS
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GM5
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPB
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GM5
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPT
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPB
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTL
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GPT
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTO
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTP
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTS
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.LDP
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Outline
+DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.REP
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.Outline
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Default Configuration\Outputs\Gerber\FET Module.RUL
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.REP
 DItemRevisionGUID=
 
 [GeneratedDocument20]
+DocumentPath=Default Configuration\Outputs\Gerber\FET Module.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument21]
 DocumentPath=Default Configuration\Outputs\NC Drill\FET Module.TXT
 DItemRevisionGUID=
 
@@ -226,7 +230,7 @@ OutputDir=Outputs
 [OutputGroup1]
 Name=Netlist Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=EDIF
 OutputName1=EDIF for PCB
@@ -242,7 +246,7 @@ OutputDefault2=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=AdvSimNetlist
 OutputName1=Mixed Sim
@@ -325,7 +329,7 @@ PageOptions11=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup4]
 Name=Assembly Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=Assembly
 OutputName1=Assembly Drawings
@@ -342,7 +346,7 @@ OutputDefault2=0
 [OutputGroup5]
 Name=Fabrication Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=Board Stack Report
 OutputName1=Report Board Stack
@@ -398,7 +402,7 @@ PageOptions9=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintS
 [OutputGroup6]
 Name=Report Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=BOM_PartType
 OutputName1=Bill of Materials
@@ -430,7 +434,7 @@ OutputDefault5=0
 [OutputGroup7]
 Name=Other Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=Text Print
 OutputName1=Text Print
@@ -610,7 +614,7 @@ PageOptions29=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|Print
 [OutputGroup8]
 Name=Validation Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=Configuration compliance
 OutputName1=Environment configuration compliance check
@@ -644,7 +648,7 @@ OutputDefault5=0
 [OutputGroup9]
 Name=Export Outputs
 Description=
-TargetPrinter=ECOSYS P6026cdn
+TargetPrinter=Kyocera ECOSYS P6026cdn
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintWhat=1
 OutputType1=ExportSTEP
 OutputName1=Export STEP
